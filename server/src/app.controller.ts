@@ -6,11 +6,13 @@ import { ApiService } from './api/api.service';
 export class AppController {
   constructor(private readonly appService: AppService, private readonly apiService: ApiService) {}
 
+  // GET route for / to check for vitals
   @Get()
   getStats(): { message: string } {
     return this.appService.getStats();
   }
 
+  // GET route for /isValid to check validity of given API
   @Get('/isValid')
   async checkValidity() {
     try {

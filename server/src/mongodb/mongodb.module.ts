@@ -11,8 +11,11 @@ import { MongodbController } from './mongodb.controller';
       provide: 'DATABASE_CONNECTION',
       useFactory: async (): Promise<Collection> => {
         const URI = process.env.URI;
+
+        // Connect to MongoDB database via the URI
         const client = await MongoClient.connect(URI, { serverApi: { version: ServerApiVersion.v1, strict: true, deprecationErrors: true } });
         
+        // Return the specific collection
         return client.db(process.env.DB).collection("users");
       }
     },
