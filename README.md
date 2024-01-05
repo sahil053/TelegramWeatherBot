@@ -14,4 +14,6 @@ You can use these commands to interact with the bot:
 
  • /help to get the list of all the commands
 
-please note that the bot and admin is deployed on free server so as the server sleeps after some time please give the app some time to work smoothly when you run it.
+note-
+1. the commands are case sensitive
+2. The bot and admin is deployed on free server as the server sleeps after some time please give the app some time to work smoothly when you run it.
