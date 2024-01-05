@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center py-6 px-8">
       <Link to='/' className='flex text-text gap-4 items-center text-lg hover:opacity-75'>
-        <img src={NavIcon} alt='Nav Icon' />NAHH Weather
+        <img src={NavIcon} alt='Nav Icon' />Weather Bot
       </Link>
       <div className="relative inline-block">     
         <button type="button" onClick={() => setToggle(!toggle)} className="inline-flex mt-1" title="Account">

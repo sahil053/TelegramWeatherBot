@@ -11,7 +11,9 @@ export default function AdminPanel() {
   
   useEffect(() => {
     axios.get(`${import.meta.env.VITE_APP_ENDPOINT}/mongodb/allUsers`, { crossdomain: true }).then(res => {
-      setUsers(res.data)
+      const usersArray = Object.keys(res.data).map(key => res.data[key]);
+      console.log(res.data);
+      setUsers(usersArray)
     }).catch(err => console.log(err))
   }, [user])
 
